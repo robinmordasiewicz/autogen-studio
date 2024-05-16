@@ -1,11 +1,11 @@
 {
   "image": "docker.io/robinmordasiewicz/autogen-studio:latest",
-  "initializeCommand": "docker pull docker.io/robinmordasiewicz/autogen-studio:latest",
-  "name": "autogen-studio",
+  "initializeCommand": "docker pull docker.io/robinmordasiewicz/autogenstudio:latest",
+  "postStartCommand": "nohup bash -c 'autogenstudio ui --host 0.0.0.0 --appdir /data/autogenstudio --port 8081 &' >/tmp/autogen.tmp",
+  "name": "autogenstudio",
   "runArgs": [
-    "--name=autogen-studio",
-    "--hostname=autogen-studio",
-    "--gpus=all",
+    "--name=autogenstudio",
+    "--hostname=autogenstudio",
     "--net=host"
   ]
 }
