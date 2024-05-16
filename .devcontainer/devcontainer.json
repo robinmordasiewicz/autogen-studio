@@ -1,0 +1,11 @@
+{
+  "image": "docker.io/robinmordasiewicz/autogen-studio:latest",
+  "initializeCommand": "docker pull docker.io/robinmordasiewicz/autogen-studio:latest",
+  "name": "autogen-studio",
+  "runArgs": [
+    "--name=autogen-studio",
+    "--hostname=autogen-studio",
+    "--gpus=all",
+    "--net=host"
+  ]
+}
